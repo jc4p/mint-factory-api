@@ -1,0 +1,15 @@
+{
+  "name": "mint-factory-api",
+  "version": "1.0.0",
+  "description": "API server for NFT collection creation",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.js",
+    "start": "bun run src/index.js"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^0.8.0",
+    "elysia": "^0.8.17"
+  }
+}
