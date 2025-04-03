@@ -14,7 +14,7 @@ const API_KEY = process.env.API_KEY;
 // Verify API key middleware
 const verifyApiKey = (app) =>
   app.derive(({ headers }) => {
-    const apiKey = headers['x-api-key'];
+    const apiKey = headers['x-api-key'] || headers['X-API-Key'] || headers['X-API-KEY'];
     
     if (!apiKey || apiKey !== API_KEY) {
       throw new Error('Invalid API key');
