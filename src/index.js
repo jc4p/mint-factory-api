@@ -121,7 +121,8 @@ const app = new Elysia()
     };
   })
   .listen({
-    port: PORT
+    port: PORT,
+    timeout: 90000 // 90 second timeout for long-running requests
   });
 
 const server = app.server;
